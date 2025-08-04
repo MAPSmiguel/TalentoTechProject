@@ -6,8 +6,6 @@ Hot pink: #DC4D80
 Sky Blue: #7AD1ED
 */
 
-
-
 body{
     padding: 0;
     margin: 0;
@@ -53,6 +51,28 @@ body{
     color: #333;
 }
 
+.emoji1{
+    position: absolute;
+    top: 125px;
+    left: 335px;
+    max-width: 10%;
+}
+
+.emoji2{
+    position: absolute;
+    transform: rotate(315deg);
+    top: 90px;
+    left: 1160px;
+    max-width: 7%;
+}
+
+.emoji3{
+    position: absolute;
+    top: 430px;
+    right: 1px;
+    max-width: 8%;
+}
+
 .main-content{
     /*Cambiar la distribución según el estilo*/
     display: grid;
@@ -93,40 +113,71 @@ body{
 
 .content-text h3{
     grid-area: h3;
+    padding-top: 20px;
     margin: 0;
-    background-color: #7ad1ed33;
+    background-color: #7ad1ed44;
 }
 
 .content-text p{
     grid-area: p;
     margin: 0;
-    background-color: #7ad1ed33;
+    background-color: #7ad1ed44;
+    padding: 30px;
+}
+
+.content-canva{
+    grid-area: content-text;
+    display: grid;
+    grid-template-rows: 35px 30px 220px;
+    grid-template-areas:
+    "header"
+    "h3"
+    "p";
+}
+
+.content-canva header{
+    grid-area: header;
+    background-color: #ff659b;
+    border-radius: 8px;
+}
+
+.content-canva h3{
+    grid-area: h3;
+    padding-top: 20px;
+    margin: 0;
+}
+
+.content-canva p{
+    grid-area: p;
+    margin: 0;
+    padding: 30px;
 }
 
 .content-image{
     grid-area: content-image;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40px 250px 250px 250px;
+    grid-template-rows: 35px 250px 250px 250px;
     grid-template-areas: 
     "header"
     "image1"
     "image2"
     "image3";
-    padding: 0;
+    place-items: center;
 }
 
 .content-image header{
     grid-area: header;
+    width: 100%;
+    height: 35px;
     background-color: #ff659b;
     border-radius: 8px;
+    margin: 0;
 }
 
 .content-image img{
-    max-width: 45%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    margin: 10px;
+    max-width: 80%;
+    border-radius: 10px;
 }
 
 .content-canva{
