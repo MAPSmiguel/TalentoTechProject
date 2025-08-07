@@ -6,14 +6,14 @@ Posible idea:
 Futuro: Electrónicos, inteligencia artificial, robots...
 -->
 
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/estilos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Paneles Solares</title>
 </head>
 <body>
@@ -28,10 +28,9 @@ Futuro: Electrónicos, inteligencia artificial, robots...
                 <li class="submenu">
                 <a href="#">Décadas</a>
                 <ul>
-                    <li><a href="#">1950s–1980s | Primeros Rayos</a></li>
-                    <li><a href="#">1990s–2000s | Expansión Accesible</a></li>
-                    <li><a href="#">2010s–Actualidad | Boom Global</a></li>
-                    <li><a href="#">Futuro Solar</a></li>
+                    <li><a href="sections/section1.html">1950s–1980s | Primeros Rayos</a></li>
+                    <li><a href="sections/section2.html">1990s–2000s | Expansión Accesible</a></li>
+                    <li><a href="sections/section3.html">2010s–Actualidad | Boom Global</a></li>
                 </ul>
                 </li>
                 <li><a href="#bibliografia">Bibliografía</a></li>
@@ -61,49 +60,41 @@ Futuro: Electrónicos, inteligencia artificial, robots...
             Desde 2010 hasta hoy, los avances han sido enormes: China lidera la producción, los precios han caído más de un 90 %, y se han desarrollado nuevas tecnologías como los paneles bifaciales, flotantes y las celdas de perovskita. Hoy, la energía solar es una de las más baratas y más instaladas del mundo, y se espera que sea la principal fuente eléctrica para 2050.
             </p>
         </div>
-        <div class="imagen1"> <img src="/img/imagen1.jpg" alt="Imagen paneles solares"></div>
+        <div class="imagen1"> <img src="img copy/imagen1.jpg" alt="Imagen paneles solares"></div>
     </section>
 
   <!-- BLOQUES  -->
-  <section class="bloques_principales">
-    <div class="bloque">
-        <h2>1950s–1980s | Primeros Rayos</h2>
-        <ul>
-            <li>Nace la primera celda solar de silicio (1954).</li>
-            <li>Se usa en satélites.</li>
-            <li>Surge interés tras la crisis del petróleo.</li>
-            <li>Alta eficiencia, pero alto costo.</li>
-        </ul>
-        <a href="sections/section1.html"> Conocer mas </a></div>
+    <section class="bloques_principales">
+        <div class="bloque">
+            <h2>1950s–1980s | Primeros Rayos</h2>
+            <ul>
+                <li>Nace la primera celda solar de silicio (1954).</li>
+                <li>Se usa en satélites.</li>
+                <li>Surge interés tras la crisis del petróleo.</li>
+                <li>Alta eficiencia, pero alto costo.</li>
+            </ul>
+            <a href="sections/section1.html"> Conocer mas </a></div>
 
-    <div class="bloque">
-        <h2>1990s–2000s | Expansión </h2>
-        <ul>
-            <li>Accesible.</li>
-            <li>Bajan costos y mejora la eficiencia.</li>
-            <li>Políticas de subsidio en Alemania y Japón.</li>
-            <li>Se empieza a usar en casas y comercios.</li>
-        </ul>
-        <a href="sections/section2.html"> Conocer mas </a></div>
+        <div class="bloque">
+            <h2>1990s–2000s | Expansión </h2>
+            <ul>
+                <li>Accesible.</li>
+                <li>Bajan costos y mejora la eficiencia.</li>
+                <li>Políticas de subsidio en Alemania y Japón.</li>
+                <li>Se empieza a usar en casas y comercios.</li>
+            </ul>
+            <a href="sections/section2.html"> Conocer mas </a></div>
 
-    <div class="bloque">
-        <h2>2010s–Actualidad | Boom Global</h2>
-        <ul>
-            <li>China lidera en producción e instalación.</li>
-            <li>Grandes parques solares.</li>
-            <li>Tecnologías como bifaciales y flotantes.</li>
-            <li>+1400 GW instalados en el mundo.</li>
-        </ul>
-        <a href="sections/section3.html"> Conocer mas </a></div>
+        <div class="bloque">
+            <h2>2010s–Actualidad | Boom Global</h2>
+            <ul>
+                <li>China lidera en producción e instalación.</li>
+                <li>Grandes parques solares.</li>
+                <li>Tecnologías como bifaciales y flotantes.</li>
+                <li>+1400 GW instalados en el mundo.</li>
+            </ul>
+            <a href="sections/section3.html"> Conocer mas </a></div>
 
-    <div class="bloque">
-        <h2>Futuro Solar</h2>
-        <ul>
-            <li>Avances en materiales (perovskitas).</li>
-            <li>Mejor reciclaje y más almacenamiento.</li>
-            <li>Meta: ser la fuente #1 de energía mundial para 2050.</li>
-        </ul>
-        <a href="sections/section4.html"> Conocer mas </a></div>
     </section>
 
   <!-- SECCIÓN TEXTO -->
@@ -121,28 +112,62 @@ Futuro: Electrónicos, inteligencia artificial, robots...
     </section>
     <!-- SECCIÓN GRÁFICAS-->
     <section class="graficas">
-        <div class="grafica"> (Gráfico 1) </div>
-        <div class="grafica"> (Gráfico 2) </div>
-        <div class="texto-grafica"> (Texto sobre la evolución global) </div>
+        <div>
+            <h2>📈 Evolución del uso de energía solar en el mundo</h2>
+            <div class="explicacion-grafica">
+                <h4>📈 Evolución Solar por Regiones</h4>
+                <p>Esta gráfica muestra cómo ha crecido la generación solar en diferentes regiones del mundo desde los años 2000 hasta la fecha actual. Se observa un fuerte aumento en Asia y África durante la última década.</p>
+            </div>
+            <canvas id="solarChart" width="800" height="400"></canvas>
+       </div>
+       <div>
+        <div class="explicacion-grafica">
+            <h4>📊 Comparación entre 2010 y Actualidad</h4>
+            <p>Comparación entre los 10 países que más han incrementado su producción solar entre el año 2010 y el más reciente disponible. Se destaca el ascenso de China como líder en capacidad instalada.</p>
+        </div>
+           <canvas id="comparacionSolar" width="900" height="500"></canvas>     
+       </div>
     </section>
 
   <!-- FOOTER -->
+<!-- FOOTER -->
     <footer>
-        <section>
-            <div class="tex_integrantes">
-                 <h4>PRESENTADO POR:</h4>
+        <h4>PRESENTADO POR:</h4>
+        <div class="personas">
+
+            <div class="persona">
+            <img src="img copy/bio-gas.png" alt="Bioingeniería" class="avatar">
+            <p><strong>Miguel Ángel Piedrahita</strong><br>
+            Estudiante de Bioingeniería, UdeA</p>
+            <p>📧 <a href="mailto:miguel.piedrahita3@udea.edu.co">miguel.piedrahita3@udea.edu.co</a></p>
             </div>
-            <div class="integrantes1">integrantes1</div>
-            <div class="integrantes2">integrantes2</div>
-            <div class="integrantes3">integrantes3</div>
-        </section>
-        <section>
-            <div id="bibliografia" class="bibliografia"> 
-                <a href="#">(Referencias / Bibliografía) </a>
+
+            <div class="persona">
+            <img src="img copy/online-strategy.png" alt="Sistemas" class="avatar">
+            <p><strong>Yensen Melgarejo</strong><br>
+            Estudiante de Ingeniería de Sistemas, UdeA</p>
+            <p>📧 <a href="mailto:yensen.melgarejo@udea.edu.co">yensen.melgarejo@udea.edu.co</a></p>
             </div>
-            <div class="creditos"> (Créditos y logo circular) </div>
-        </section>
+
+            <div class="persona">
+            <img src="img copy/mechanical-gears-.png" alt="Mecánica" class="avatar">
+            <p><strong>Sebastián Villa Correa</strong><br>
+            Estudiante de Ingeniería Mecánica, UdeA</p>
+            <p>📧 <a href="mailto:sebastian.vcorrea@udea.edu.co">sebastian.vcorrea@udea.edu.co</a></p>
+            </div>
+
+        </div>
+
+        <div class="creditos">
+            <a href="#bibliografia">(Referencias / Bibliografía)</a>
+            <p>© 2025 – Proyecto académico sin fines comerciales.<br>
+            UdeA · Facultad de Ingeniería</p>
+        </div>
     </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="/js/script.js"></script>
 
 </body>
 </html>
