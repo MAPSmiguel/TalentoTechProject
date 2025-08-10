@@ -44,7 +44,7 @@
 
         <h2 class="calculadora-titulo" id="calculadora-titulo">Calculadora de energía solar</h2>
         <div class="calculadora" id="calculadora">
-            <form action="">
+            <form>
                 <label for="name">¿Cuál es tu nombre?</label>
                 <input type="text" name="name" id="name" placeholder="Ingrese su nombre" required><br>
 
@@ -75,10 +75,7 @@
                     <option value="">Seleccione una opción</option>
                     <option value="epm">Empresas Públicas de Medellín</option>
                     <option value="enel">Enel</option>
-                    <option value="isagen">Isagen</option>
                     <option value="celsia">Celsida</option>
-                    <option value="aes">AES</option>
-                    <option value="tebsa">Tebsa</option>
                 </select> <br>
 
                 <label for="presupuesto">¿Con qué presupuesto cuentas para construir paneles solares en tu hogar?</label>
@@ -100,9 +97,11 @@
                 </select> <br>
 
 
-                <button type="submit">Calcular</button>
+                <button id="button">Calcular</button>
             </form>
         </div>
+
+        <div id="output"></div>
     </main>
 
     <footer class="footer">
@@ -112,5 +111,6 @@
     </footer>
 
     <script src="js/section3.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>
