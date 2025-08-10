@@ -9,29 +9,105 @@
 <body>
     <header class="header">
         <h1>La evolución y adopción de paneles solares en el tiempo</h1>
+        <nav>
+            <ul>
+                <li><a href="/index copy.html">INICIO</a></li>
+                <li><a href="#">DÉCADAS ▼</a>
+                    <ul>
+                        <li><a href="section1.html" id="p1950">1950s - 1980s</a></li>
+                        <li><a href="section2.html">1990s - 2000s</a></li>
+                        <li><a href="section3.html">2000s - Actual</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">REFERENCIAS</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main class="main-content">
-        <div class="content_1">
-            <h3>Título</h3>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+        <div class="introduccion">
+            <h2>El futuro de las energías limpias</h2>
+            <p> ¿Quieres saber cómo los paneles solares pueden ayudarte a ahorrar en tu hogar? Prueba nuestra calculadora energética aquí</p>
+            <button><a href="#calculadora-titulo">Ir a la calculadora</a></button>
         </div>
-        <div class="content_2">
-            <h3>Título</h3>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+
+        <h1 class="informacion-titulo">Información de Paneles solares</h1>
+        <div class="informacion">
+            <section>
+                <h2> Texto de referencia</h2>
+                <p>lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+            </section>
+            <canvas></canvas>
         </div>
-        <div class="content_3">
-            <h3>Título</h3>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
-        </div>
-        <div class="content_4">
-            <h3>Título</h3>
-            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+
+
+        <h2 class="calculadora-titulo" id="calculadora-titulo">Calculadora de energía solar</h2>
+        <div class="calculadora" id="calculadora">
+            <form action="">
+                <label for="name">¿Cuál es tu nombre?</label>
+                <input type="text" name="name" id="name" placeholder="Ingrese su nombre" required><br>
+
+                <label for="consumo">¿Cuál es tu consumo mensual de energía en kWh?</label>
+                <input type="number" name="consumo" id="consumo" placeholder="Ingrese su consumo mensual en kWh" required> <br>
+
+                <label for="estrato">¿Cuál es tu estrato socioeconómico?</label>
+                <select name="estrato" id="estrato" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select><br>
+
+                <label for="clima">¿Cuál es el clima habitual en tu residencia?</label>
+                <select name="clima" id="clima" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Templado">Templado</option>
+                    <option value="Frio">Frío</option>
+                    <option value="Calido">Cálido</option>
+                </select> <br>
+
+                <label for="empresa">¿Cuál es tu empresa proveedora de energía?</label>
+                <select name="empresa" id="empresa" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="epm">Empresas Públicas de Medellín</option>
+                    <option value="enel">Enel</option>
+                    <option value="isagen">Isagen</option>
+                    <option value="celsia">Celsida</option>
+                    <option value="aes">AES</option>
+                    <option value="tebsa">Tebsa</option>
+                </select> <br>
+
+                <label for="presupuesto">¿Con qué presupuesto cuentas para construir paneles solares en tu hogar?</label>
+                <select name="presupuesto" id="presupuesto" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="bajo">$800.000</option>
+                    <option value="medio">$800.000 - $1.500.000</option>
+                    <option value="medio-alto">$1.500.000 - $2.500.00</option>
+                    <option value="alto">Más de $2.500.000</option>
+                </select> <br>
+
+                <label for="panel">¿Qué tipo de panel deseas instalar en tu hogar?</label>
+                <select name="panel" id="panel" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="pequeño">Panel Solar Pequeño 150W 12V Policristalino EcoGreen ($340.750)</option>
+                    <option value="mediano">Panel Solar 340W 24V Monocristalino PERC JA Solar ($615.938)</option>
+                    <option value="grande">Panel Solar 450W 24V Monocristalino PERC EcoGreen ($889.963)</option>
+                    <option value="enorme">Panel Solar 550W 24V Monocristalino PERC EcoGreen ($1.152.002)</option>
+                </select> <br>
+
+
+                <button type="submit">Calcular</button>
+            </form>
         </div>
     </main>
 
     <footer class="footer">
-
+        <a href="#bibliografia">(Referencias / Bibliografía)</a>
+        <p>© 2025 – Proyecto académico sin fines comerciales.
+            UdeA · Facultad de Ingeniería</p>
     </footer>
 </body>
 </html>

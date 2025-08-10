@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a2eee;
+    margin: 0;
+    padding: 0;  
+}
+
+.header{
+    background: linear-gradient(135deg, #1a1a2e 0%, #4a4a6a 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.header h1{
+    font-size: 2em;
+    background: linear-gradient(to right, #00a8af, #00ff9d);
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    margin-bottom: 0;
+    padding: 10px 0 10px 20px;
+}
+
+.header nav{
+    display: block;
+    margin-top: 0;
+    background-color: #1a1a2eaa;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+.header nav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.header nav ul li{
+    position: relative;
+    margin: 0 20px 10px 10px;
+    padding: 0;
+}
+
+.header nav ul li a{
+    text-decoration: none;
+    color: #e6e6e6;
+    transition: 0.3s;
+}   
+
+.header nav ul li a:hover{
+    color: #9d9d9d;
+}
+
+.header nav ul li ul{
+    display: none;
+    font-size: 0.9em;
+    background-color: #4a4a6a;
+    border-radius: 10px;
+    min-width: 150px;
+    position: absolute;
+    padding: 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.header nav ul li ul li{
+    display: block;
+}
+
+.header nav li:hover > ul {
+    display: block;
+}  
+
+
+.introduccion{
+    display: block;
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.9)), 
+                        url('https://www.celsia.com/wp-content/uploads/2021/03/607x390_69.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    margin: 40px auto;
+    padding: 60px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.introduccion h2{
+    color: #eee;
+    font-size: 2.2em;
+}
+
+.introduccion p{
+    max-width: 55%;
+    color: #eeed;
+    font-size: 1.2em;
+}
+
+.introduccion button{
+    background: linear-gradient(to right, #00a8af, #00ff9d);
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.introduccion button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+}
+
+.introduccion a{
+    text-decoration: none;
+    color: #333;
+}
+
+.informacion-titulo{
+    color: white;
+    margin-left: 4rem;
+    position: relative;
+    font-size: 2.4em;
+}
+
+.informacion-titulo::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(to right, #00a8ff, transparent);
+    border-radius: 2px;
+}
+
+.informacion{
+    display: grid;
+    width: 90%;
+    margin: 20px auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "canvas section";
+    gap: 2rem;
+}
+
+.informacion section{
+    grid-area: section;
+}
+
+.informacion section h2{
+    color: #eeeeee;
+}
+
+.informacion section p{
+    color: #eeeeeecc;
+}
+
+.informacion canvas{
+    grid-area: canvas;
+    background-color: #4a4a6a;
+    width: 100%;
+}
+
+.calculadora-titulo{
+    color: white;
+    margin-left: 4rem;
+    position: relative;
+    font-size: 2.4em;
+}
+
+.calculadora-titulo::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(to right, #00a8ff, transparent);
+    border-radius: 2px;
+}
+
+.calculadora {
+    background: rgba(34, 40, 49, 0.98);
+    width: 100%;
+    max-width: 60%;
+    margin: 40px auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 20px;
+    padding: 32px 28px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.calculadora select,
+.calculadora input {
+    margin: 0 0 18px 0;
+    padding: 12px 16px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #00a8af33;
+    background-color: #232931;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.calculadora select:focus,
+.calculadora input:focus {
+    border: 1.5px solid #00ff9d;
+}
+
+.calculadora button {
+    background: linear-gradient(to right, #00a8af, #00ff9d);
+    color: #232931;
+    padding: 20px;
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 168, 175, 0.15);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.calculadora button:hover {
+    background: linear-gradient(to right, #00ff9d, #00a8af);
+    color: #fff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 255, 157, 0.18);
+}
+
+.footer{
+    background: linear-gradient(135deg, #1a1a2e 0%, #4a4a6a 100%);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #00a8af;
+}
+.footer a{
+    color: #0d6b6e;
+    text-decoration: none;
+}
