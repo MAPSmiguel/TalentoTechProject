@@ -166,8 +166,10 @@ body{
 
 .informacion canvas{
     grid-area: canvas;
-    background-color: #4a4a6a;
-    width: 100%;
+    background-color: white;
+    max-width: 100%;
+    max-height: 200%;
+    border-radius: 20px;
 }
 
 .calculadora-titulo{
