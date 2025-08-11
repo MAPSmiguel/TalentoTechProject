@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         const precioEnergiaMensual = precioEnergia * consumoValue;
-        const energiaGenerada = potenciaPanel * 4 * 30;
+        const energiaGenerada = potenciaPanel * 4 * 30; 
         let presupuestoUtil = 0;
         let numPaneles = 0;
 
@@ -143,13 +143,38 @@ document.addEventListener('DOMContentLoaded', function() {
             numPaneles++;
             presupuestoUtil = presupuestoUtil + valorPanel;
         }
-        numPaneles--;
+        numPaneles--; //Número de paneles que se pueden comprar con el presupuesto
+        const energiaTotalGenerada = (numPaneles * energiaGenerada)/1000; //Energía total generada por los paneles en un mes
 
         const gastoTotal = numPaneles * valorPanel;
-        const energiaTotal = numPaneles * energiaGenerada;
 
+        
         const gastoFamiliar = ((consumoValue - cs)*precioEnergia) + (cs*subsidio*precioEnergia);
-        console.log(cs);
-        console.log(gastoFamiliar);
+        
+        const ahorro = energiaTotalGenerada * precioEnergia;//Ganancia que se ahorraría al mes una vez recuperado
+        const tiempoRecuperacion = Math.round(gastoTotal / ahorro); //Tiempo en meses para la recuperación de la inversión
+
+        const gastoConPaneles = (gastoFamiliar - ahorro); //Gasto mensual con paneles
+
+
+
+        if (numPaneles <= 0) {
+            output.style.display = 'flex';
+            output.textContent = `<h2>Tus resultados</h2> <br>` + 'Con el presupuesto seleccionado no es posible adquirir ningún panel.';
+        } else if (gastoConPaneles <= 0) {
+            output.style.display = 'flex';
+            output.innerHTML = `<h2>Tus resultados</h2> <br>` + `Con el presupuesto seleccionado, puede adquirir ${numPaneles} panel(es) solar(es) que generarán aproximadamente ${energiaTotalGenerada} kW al mes.<br>` +
+            `Empezarás a ahorrar ${gastoFamiliar.toFixed(2)} COP desde el primer mes! <br>` +
+            `Para más información, consulta la siguiente página: <a href="https://autosolar.co/paneles-solares-24v" target="_blank">Compra de Paneles Solares</a>`;
+        } 
+        else {
+            output.style.display = 'flex';
+            output.innerHTML = `<h2>Tus resultados</h2> <br>` +
+            `Con el presupuesto seleccionado, puede adquirir ${numPaneles} panel(es) solar(es) que generarán aproximadamente ${energiaTotalGenerada} kW al mes.<br>`+
+            `El gasto mensual en energía eléctrica sin paneles sería de aproximadamente ${gastoFamiliar.toFixed(2)} COP.<br>` +
+            `El gasto mensual en energía eléctrica con los paneles sería de aproximadamente ${gastoConPaneles.toFixed(2)} COP.<br>` +
+            `El tiempo estimado para recuperar la inversión realizada en los paneles solares es de ${tiempoRecuperacion} meses. Una vez cumplido este tiempo, el ahorro mensual sería de aproximadamente ${ahorro.toFixed(2)} COP. <br>` +
+            `Para más información, consulta la siguiente página: <a href="https://autosolar.co/paneles-solares-24v" target="_blank">Compra de Paneles Solares</a>`;
+        }
     })
 });

@@ -245,6 +245,7 @@ canvas {
   border-radius: 14px;
   padding: 10px;
   box-shadow: 0 4px 16px var(--shadow);
+  margin: 20px auto;
 }
 
 /* === FOOTER === */

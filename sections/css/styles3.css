@@ -6,7 +6,7 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     background-color: #1a1a2eee;
     margin: 0;
     padding: 0;  
@@ -244,6 +244,29 @@ body{
     color: #fff;
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 8px 24px rgba(0, 255, 157, 0.18);
+}
+
+.output{
+    background: rgba(34, 40, 49, 0.98);
+    width: 100%;
+    max-width: 60%;
+    margin: 40px auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 20px;
+    padding: 32px 28px;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+
+.output a{
+    text-decoration: none;
+    color: #00a8ff;
 }
 
 .footer{
